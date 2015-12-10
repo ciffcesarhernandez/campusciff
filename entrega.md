@@ -342,7 +342,7 @@ Deleted branch v0.2 (was c439f18).
 ![Data Science Toolkit 9](/img/9.png)
 
 # Repositorios seguidos y estrellas añadidas
-![Data Science Toolkit 10](/img/10.png)
+![Data Science Toolkit 10](/img/10..png)
 
 # Creo una tabla con los usuarios de mis compañeros
 NOMBRE| GITHUB
