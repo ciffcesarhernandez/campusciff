@@ -345,11 +345,11 @@ Deleted branch v0.2 (was c439f18).
 ![Data Science Toolkit 10](/img/10..png)
 
 # Creo una tabla con los usuarios de mis compañeros
-NOMBRE| GITHUB
--- | --:
-Sara Otero | [Enlace a URL Sara](https://github.com/ciffSara)
-Alejandro Díaz | [Enlace a URL Alejandro](https://github.com/adiazgalache)
-Goaluix | https://github.com/goaluix
+| NOMBRE | GITHUB |
+| -- | --: |
+| Sara Otero | [Enlace a URL Sara](https://github.com/ciffSara) |
+| Alejandro Díaz | [Enlace a URL Alejandro](https://github.com/adiazgalache) |
+| Goaluix | https://github.com/goaluix |
 
 # Añado a asanzdiego como colaborador de mi repositorio campusciff
 ![Data Science Toolkit 11](/img/11.png)
