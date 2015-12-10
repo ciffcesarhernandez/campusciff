@@ -346,7 +346,7 @@ Deleted branch v0.2 (was c439f18).
 
 # Creo una tabla con los usuarios de mis compañeros
 NOMBRE| GITHUB
--- | --
+-- | --:
 Sara Otero | [Enlace a URL Sara](https://github.com/ciffSara)
 Alejandro Díaz | [Enlace a URL Alejandro](https://github.com/adiazgalache)
 Goaluix | https://github.com/goaluix
@@ -421,7 +421,7 @@ To git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.gi
  * [new branch]      master -> master
 
 # Aquí proporciono la URL de mi Servidor web 
-[Pincha aquí para acceder ami servidor WEB en GITHUB](http://campusciff-ciffcesarhernandez.github.io/)
+[Pincha aquí para acceder a mi servidor WEB en GITHUB](http://campusciff-ciffcesarhernandez.github.io/)
 
 # Mi primer fork
 ![Data Science Toolkit 16](/img/16.png)
