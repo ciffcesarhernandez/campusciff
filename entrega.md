@@ -1,19 +1,18 @@
 # repositorio campusciff creado en GitHub:
-
+Repositorio Entrega de Ejercicios
 ![Data Science Toolkit 1](/img/1.png)
 
 
-# campusciff
-Repositorio Entrega de Ejercicios
-
 # Realizo la configuración inicial
+~~~
 Sara Otero@SARA MINGW64 ~ (master)
 $ git config --global user.name "César"
 
 Sara Otero@SARA MINGW64 ~ (master)
 $ git config --global user.email "cesarhernandez@campusciff.net"
-
+~~~
 # Creo el directorio 20151130, me sitúo en él e inicio git
+~~~
 Sara Otero@SARA MINGW64 ~ (master)
 $ mkdir 20151130
 
@@ -23,8 +22,9 @@ $ cd 20151130/
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ git init
 Initialized empty Git repository in C:/Users/Sara Otero/20151130/.git/
-
+~~~
 # Realizo el clonado del repositorio campusciff en mi repositorio local
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ git clone git@github.com:ciffcesarhernandez/campusciff.git
 Cloning into 'campusciff'...
@@ -33,12 +33,13 @@ remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 Checking connectivity... done.
-
+~~~
 # Clonado realizado
 ![Data Science Toolkit 2](/img/2.png)
 
 # Me sitúo en el repositorio creado campusciff, 
 # Añado el archivo README.md, realizo el commit y el push
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ cd campusciff
 
@@ -60,33 +61,38 @@ Writing objects: 100% (3/3), 706 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@github.com:ciffcesarhernandez/campusciff.git
    82cfde1..37b42c3  master -> master
-
+~~~
 # Creo archivo de texto privado.txt con texto privado
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo privado > privado.txt
-
+~~~
 
 # Creo carpeta privada
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ mkdir privada
 ![Data Science Toolkit 3](/img/3.png)
-
+~~~
 
 # Añado a .gitignore tanto el archivo como la carpeta
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo privada > .gitignore
 
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo privado.txt >> .gitignore
-
+~~~
 # Compruebo con un cat que he añadido a .gitignore tanto la carpeta como el txt
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ cat .gitignore
 privada
 privado.txt
-
+~~~
 # Añado al repositorio local el .gitignore, realizo un commit y un push para comprobar
 # Así compruebo que solo he subido al repositorio el .gitignore 
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git add .gitignore
 
@@ -98,12 +104,14 @@ The file will have its original line endings in your working directory.
  1 file changed, 2 insertions(+)
  create mode 100644 .gitignore
 ![Data Science Toolkit 4](/img/4.png)
-
+~~~
 # Genero el archivo 1.txt con texto 1
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo 1 > 1.txt
-
+~~~
 # Añado el archivo 1.txt, hago commit y creo la tag ligera v0.1
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo 1 > 1.txt
 
@@ -122,8 +130,9 @@ The file will have its original line endings in your working directory.
 
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git tag v0.1
-
+~~~
 # Con el comando git tag compruebo que se ha creado la etiqueta v0.1 y con git show su contenido
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git tag
 v0.1
@@ -143,9 +152,9 @@ index 0000000..d00491f
 +++ b/1.txt
 @@ -0,0 +1 @@
 +1
-
+~~~
 # Subo al repositorio remoto
-
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git push origin master
 Enter passphrase for key '/c/Users/Sara Otero/.ssh/id_rsa':
@@ -156,17 +165,19 @@ Writing objects: 100% (3/3), 316 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@github.com:ciffcesarhernandez/campusciff.git
    4e558c5..2e39946  master -> master
-
+~~~
 # El fichero de texto 1.txt se ha subido correctamente al repositorio remoto
 ![Data Science Toolkit 5](/img/5.png)
 
 
 # Creo la rama v0.2 y directamente me sitúo sobre ella con el comando git checkout -b
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git checkout -b v0.2
 Switched to a new branch 'v0.2'
-
+~~~
 # Sobre la rama creo el archivo de texto 2.txt, lo añado y hago un commit
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ echo 2 > 2.txt
 
@@ -182,8 +193,9 @@ warning: LF will be replaced by CRLF in 2.txt.
 The file will have its original line endings in your working directory.
  1 file changed, 1 insertion(+)
  create mode 100644 2.txt
-
+~~~
 # Lo subo al repositorio remoto poniendo la rama destino v0.2
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ git push origin v0.2
 Enter passphrase for key '/c/Users/Sara Otero/.ssh/id_rsa':
@@ -194,19 +206,21 @@ Writing objects: 100% (3/3), 345 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@github.com:ciffcesarhernandez/campusciff.git
  * [new branch]      v0.2 -> v0.2
-
+~~~
 # Compruebo en el repositorio remoto que se ha creado la rama v0.2
 # Donde se ha añadido el archivo 2.txt
 ![Data Science Toolkit 6](/img/6.png)
 
 
 # Me sitúo en la rama master
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ git checkout master
 Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
-
+~~~
 # Realizo un merge con la rama v0.2
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git merge v0.2
 Updating 2e39946..b915ed2
@@ -214,8 +228,9 @@ Fast-forward
  2.txt | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 2.txt
-
+~~~
 # En la rama master añado Hola en el fichero 1.txt y hago commit
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ echo Hola>>1.txt
 
@@ -223,8 +238,9 @@ Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ cat 1.txt
 1
 Hola
-
+~~~
 # Realizo el commit en master
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git add 1.txt
 warning: LF will be replaced by CRLF in 1.txt.
@@ -238,8 +254,9 @@ cb0cb65] Hola en 1.txt
 warning: LF will be replaced by CRLF in 1.txt.
 The file will have its original line endings in your working directory.
  1 file changed, 1 insertion(+)
-
+~~~
 # Me sitúo en la rama v0.2 y añado Adios en el archivo 1.txt
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git checkout v0.2
 Switched to branch 'v0.2'
@@ -251,8 +268,9 @@ Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ cat 1.txt
 1
 Adios
-
+~~~
 # Realizo el commit en la rama v0.2
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ git add 1.txt
 warning: LF will be replaced by CRLF in 1.txt.
@@ -266,40 +284,47 @@ c439f18] Adios en 1.txt
 warning: LF will be replaced by CRLF in 1.txt.
 The file will have its original line endings in your working directory.
  1 file changed, 1 insertion(+)
-
+~~~
 # Me posiciono de nuevo en la rama master
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (v0.2)
 $ git checkout master
 Switched to branch 'master'
 Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
-
+~~~
 # Realizo el merge con la rama v0.2 y aparece el siguiente conflicto
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git merge v0.2
 Auto-merging 1.txt
 CONFLICT (content): Merge conflict in 1.txt
 Automatic merge failed; fix conflicts and then commit the result.
-
+~~~
 # Listo ramas con merge
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ git branch --merged
 * master
-
+~~~
 
 # Listo ramas sin merge
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ git branch --no-merged
   v0.2
+~~~
 # Para suprimir el conflicto, modifico 1.txt y lo dejo con el texto Hola y Adios
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ echo Hola y Adios > 1.txt
 
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ cat 1.txt
 Hola y Adios
-
+~~~
 # Lo añado y hago commit
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ git add 1.txt
 warning: LF will be replaced by CRLF in 1.txt.
@@ -308,12 +333,14 @@ The file will have its original line endings in your working directory.
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master|MERGING)
 $ git commit -m "Hola y Adios en 1.txt"
 [master e09b0d6] Hola y Adios en 1.txt
-
+~~~
 # Creo la tag v0.2
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git tag v0.2
-
+~~~
 # Listo los commits con sus ramas y tags
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git log --oneline --decorate --graph --all
 *   e09b0d6 (HEAD -> master, tag: v0.2) Hola y Adios en 1.txt
@@ -326,12 +353,13 @@ $ git log --oneline --decorate --graph --all
 * 4e558c5 añado archivo .gitignore
 * 37b42c3 commit inicial
 * 82cfde1 Initial commit
-
+~~~
 # Borro la rama v0.2
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff (master)
 $ git branch -d v0.2
 Deleted branch v0.2 (was c439f18).
-
+~~~
 # Imagen de perfil
 ![Data Science Toolkit 7](/img/7.png)
 
@@ -366,7 +394,7 @@ Deleted branch v0.2 (was c439f18).
 ![Data Science Toolkit 14](/img/14.png)
 
 # Y realizo un clonado
-
+~~~
 
 Sara Otero@SARA MINGW64 ~ (master)
 $ git config --global user.name "César"
@@ -388,12 +416,12 @@ Cloning into 'campusciff-ciffcesarhernandez.github.io'...
 Enter passphrase for key '/c/Users/Sara Otero/.ssh/id_rsa':
 warning: You appear to have cloned an empty repository.
 Checking connectivity... done.
-
+~~~
 # En esa ubicación de mi máquina dejo una copia de mi index.html
 ![Data Science Toolkit 15](/img/15.png)
 
 # Y realizo la subida a mi repositorio remoto
-
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ cd campusciff-ciffcesarhernandez.github.io/
 
@@ -419,7 +447,7 @@ Writing objects: 100% (3/3), 335 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.github.io.git
  * [new branch]      master -> master
-
+~~~
 # Aquí proporciono la URL de mi Servidor web 
 [Pincha aquí para acceder a mi servidor WEB en GITHUB](http://campusciff-ciffcesarhernandez.github.io/)
 
@@ -427,6 +455,7 @@ To git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.gi
 ![Data Science Toolkit 16](/img/16.png)
 
 # Y hago un clonado del repositorio
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ git clone git@github.com:campusciff-ciffcesarhernandez/campusciff-Miriam-Asenjo.github.io.git
 Cloning into 'campusciff-Miriam-Asenjo.github.io'...
@@ -437,16 +466,20 @@ remote: Total 9 (delta 1), reused 9 (delta 1), pack-reused 0
 Receiving objects: 100% (9/9), done.
 Resolving deltas: 100% (1/1), done.
 Checking connectivity... done.
+~~~
 
 # Me sitúo en el directorio y creo una nueva rama llamada brCESAR
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ cd campusciff-Miriam-Asenjo.github.io/1
 
 Sara Otero@SARA MINGW64 ~/20151130/campusciff-Miriam-Asenjo.github.io (master)
 $ git checkout -b brCESAR
 Switched to a new branch 'brCESAR'
+~~~
 
 # Tras la inclusión de mi nombre, realizo la subida al repositorio remoto
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff-Miriam-Asenjo.github.io (brCESAR)
 $ git add index.html
 
@@ -465,6 +498,7 @@ Writing objects: 100% (3/3), 343 bytes | 0 bytes/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
 To git@github.com:campusciff-ciffcesarhernandez/campusciff-Miriam-Asenjo.github.io.git
  * [new branch]      brCESAR -> brCESAR
+~~~
 
 # Por último, envío una petición de pull request
 ![Data Science Toolkit 17](/img/17.png)
@@ -474,7 +508,7 @@ To git@github.com:campusciff-ciffcesarhernandez/campusciff-Miriam-Asenjo.github.
 ![Data Science Toolkit 18](/img/18.png)
 
 # Hago un clonado del repositorio
-
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ git clone git@github.com:campusciff-ciffcesarhernandez/campusciff-2015-1.github.io.git
 Cloning into 'campusciff-2015-1.github.io'...
@@ -484,8 +518,10 @@ remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 15
 Receiving objects: 100% (15/15), done.
 Resolving deltas: 100% (4/4), done.
 Checking connectivity... done.
+~~~
 
 # Me sitúo en el directorio y creo una nueva rama llamada brCESAR
+~~~
 Sara Otero@SARA MINGW64 ~/20151130 (master)
 $ cd campusciff-2015-1.github.io/
 
@@ -493,11 +529,12 @@ Sara Otero@SARA MINGW64 ~/20151130/campusciff-2015-1.github.io (master)
 $ git checkout -b brCESAR
 M       index.html
 Switched to a new branch 'brCESAR'
-
+~~~
 
 
 
 # Tras la inclusión de mi nombre, realizo la subida al repositorio remoto
+~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff-2015-1.github.io (brCESAR)
 $ git add index.html
 
@@ -514,7 +551,7 @@ Writing objects: 100% (3/3), 365 bytes | 0 bytes/s, done.
 Total 3 (delta 2), reused 0 (delta 0)
 To git@github.com:campusciff-ciffcesarhernandez/campusciff-2015-1.github.io.git
  * [new branch]      brCESAR -> brCESAR
-
+~~~
 # Por último, envío una petición de pull request
 ![Data Science Toolkit 19](/img/19.png)
 
@@ -534,7 +571,8 @@ Este es el cambio realizado:
 
 
 # Tengo una segunda petición de pull request de crisrodfra que tiene problemas en el Merge 
-# Por ello voy a actualizar mi repositorio local con un pull de la rama master para coger este último cambio de goaluix y realizar el merge sobre él.
+
+Por ello voy a actualizar mi repositorio local con un pull de la rama master para coger este último cambio de goaluix y realizar el merge sobre él.
 ~~~
 Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
 $ git pull git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.github.io.git master
@@ -621,4 +659,7 @@ To git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.gi
 
 ~~~
 
-[Se puede comprobar en la URL de mi servidor web que la subida ha sido correcta](http://campusciff-ciffcesarhernandez.github.io/)
+[Se puede comprobar en la URL de mi servidor web que la subida ha sido correcta y se visualizan ambos nombres](http://campusciff-ciffcesarhernandez.github.io/)
+
+Este es el cambio realizado:
+![Data Science Toolkit 23](/img/23.png)
