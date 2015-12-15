@@ -517,3 +517,108 @@ To git@github.com:campusciff-ciffcesarhernandez/campusciff-2015-1.github.io.git
 
 # Por último, envío una petición de pull request
 ![Data Science Toolkit 19](/img/19.png)
+
+# Acepto la petición de pull request de goaluix pulsando en Merge pull request
+
+![Data Science Toolkit 20](/img/20.png)
+
+# Solicitud aceptada
+
+![Data Science Toolkit 21](/img/21.png)
+
+Este es el cambio realizado:
+![Data Science Toolkit 22](/img/22.png)
+
+[Se puede comprobar en la URL de mi servidor web](http://campusciff-ciffcesarhernandez.github.io/)
+
+
+
+# Tengo una segunda petición de pull request de crisrodfra que tiene problemas en el Merge 
+# Por ello voy a actualizar mi repositorio local con un pull de la rama master para coger este último cambio de goaluix y realizar el merge sobre él.
+~~~
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
+$ git pull git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.github.io.git master
+Enter passphrase for key '/c/Users/Sara Otero/.ssh/id_rsa':
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.github.io
+ * branch            master     -> FETCH_HEAD
+Updating 166f124..15a8785
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+~~~
+
+
+# Ahora me posiciono en la rama crisrodfra-cristobal
+~~~
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
+$ git checkout -b crisrodfra-cristobal master
+Switched to a new branch 'crisrodfra-cristobal'
+~~~
+
+# y realizo un pull sobre esa rama, produciendose un conflicto en el merge automático
+~~~
+
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (crisrodfra-cristobal)
+$ git pull https://github.com/crisrodfra/campusciff-ciffcesarhernandez.github.io.git cristobal
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/crisrodfra/campusciff-ciffcesarhernandez.github.io
+ * branch            cristobal  -> FETCH_HEAD
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+~~~
+
+# Hago un diff para ver las diferencias
+~~~
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (crisrodfra-cristobal|MERGING)
+$ git diff
+diff --cc index.html
+index 46b5381,d6789cb..0000000
+--- a/index.html
++++ b/index.html
+@@@ -6,4 -6,5 +6,9 @@@
+  <BODY>
+  <P>Cesar Hernandez, bienvenido al mundo GIT</P>
+  </BODY>
+++<<<<<<< HEAD
+ +</HTML>Luis Nuño
+++=======
++ </HTML>
++ Cristobal - fork
+++>>>>>>> de0043d3dade13cc0f0947c24c31e705b3ef2339
+~~~
+# Una vez resueltos  los problemas de conflicto realizo una nueva subida a mi servidor
+~~~
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (crisrodfra-cristobal)
+$ git checkout master
+Switched to branch 'master'
+
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
+$ git add .
+
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
+$ git commit -m "commit con comentario cristobal"
+[master 6e72f38] commit con comentario cristobal
+ 1 file changed, 1 insertion(+)
+
+Sara Otero@SARA MINGW64 ~/20151130/campusciff-ciffcesarhernandez.github.io (master)
+$ git push origin master
+Enter passphrase for key '/c/Users/Sara Otero/.ssh/id_rsa':
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:campusciff-ciffcesarhernandez/campusciff-ciffcesarhernandez.github.io.git
+   15a8785..6e72f38  master -> master
+
+~~~
+
+[Se puede comprobar en la URL de mi servidor web que la subida ha sido correcta](http://campusciff-ciffcesarhernandez.github.io/)
